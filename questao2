@@ -1,0 +1,25 @@
+# Solicitando ao usuário quatro números inteiros
+num1 = int(input("Digite o primeiro número inteiro: "))
+num2 = int(input("Digite o segundo número inteiro: "))
+num3 = int(input("Digite o terceiro número inteiro: "))
+num4 = int(input("Digite o quarto número inteiro: "))
+
+# Armazenando os números em uma tupla
+numeros = (num1, num2, num3, num4)
+
+# Contando quantas vezes o número 9 aparece na tupla
+count_9 = numeros.count(9)
+
+# Verificando a posição do primeiro número 3
+pos_3 = numeros.index(3) if 3 in numeros else None
+
+# Obtendo os números pares da tupla
+pares = [num for num in numeros if num % 2 == 0]
+
+# Exibindo os resultados
+print(f"\nQuantas vezes o número 9 apareceu na tupla: {count_9}")
+if pos_3 is not None:
+    print(f"O primeiro número 3 apareceu na posição: {pos_3}")
+else:
+    print("O número 3 não apareceu na tupla.")
+print(f"Números pares contidos na tupla: {pares}")
